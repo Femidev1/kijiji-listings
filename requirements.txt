@@ -1,2 +1,6 @@
 playwright
 flask
+fastapi
+uvicorn
+flask
+flask-cors
