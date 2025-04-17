@@ -1,13 +1,6 @@
 {
     "build": {
-      "env": {
-        "PYTHONUNBUFFERED": "1"
-      },
-      "builder": "Docker",
+      "builder": "docker",
       "dockerfilePath": "backend/Dockerfile"
-    },
-    "deploy": {
-      "command": "gunicorn server:app -b 0.0.0.0:5000",
-      "cwd": "backend"
     }
   }
