@@ -8,7 +8,7 @@ from playwright.async_api import async_playwright
 # === CONFIG ===
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 LISTING_HISTORY_FILE = os.path.join(BASE_DIR, "listing_history.json")
-EXPORT_JSON_PATH = os.path.abspath(os.path.join(BASE_DIR, "../frontend/kijiji-listings/public/listings.json"))
+EXPORT_JSON_PATH = os.path.abspath(os.path.join(BASE_DIR, "../../frontend/kijiji-listings/public/listings.json"))
 REFRESH_INTERVAL = 180  # Check every 3 minutes
 CUTOFF_MINUTES = 15
 

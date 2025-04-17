@@ -8,7 +8,7 @@ CORS(app)  # Allow all origins (you can restrict later)
 
 @app.route("/listings", methods=["GET"])
 def get_listings():
-    file_path = "/app/frontend/kijiji-listings/public/listings.json"
+    file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../frontend/kijiji-listings/public/listings.json"))
 
     if not os.path.exists(file_path):
         return jsonify({"error": "File not found"}), 404
