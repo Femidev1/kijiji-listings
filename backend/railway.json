@@ -7,5 +7,9 @@
     "deploy": {
       "command": "python3 kijiji_scraper.py",
       "cwd": "backend"
-    }
+    },
+    "build": {
+        "builder": "Docker",
+        "dockerfilePath": "backend/Dockerfile"
+      }
   }
