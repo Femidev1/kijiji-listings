@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-# Allow all origins for testing (you can restrict later)
+# ✅ TEMPORARY SOLUTION: Allow all origins (or tighten with regex pattern)
 CORS(app)
 
 @app.route("/listings", methods=["GET"])
