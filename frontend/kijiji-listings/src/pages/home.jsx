@@ -4,7 +4,7 @@ export default function Home() {
   const [listings, setListings] = useState([]);
 
   useEffect(() => {
-    fetch("/listings.json")
+    fetch("https://kijiji-listings-production.up.railway.app/listings")
       .then(res => res.json())
       .then(data => setListings(data))
       .catch(err => console.error("Failed to fetch listings:", err));

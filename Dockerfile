@@ -3,11 +3,14 @@ FROM python:3.10-slim
 # Set working directory
 WORKDIR /app
 
-# Copy files
+# Copy all backend files
 COPY . .
 
-# Install dependencies
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Run script
-CMD ["python", "kijiji_scraper.py"]
+# Expose port 5000 for Flask server
+EXPOSE 5000
+
+# Run the Flask API instead of scraper
+CMD ["python", "server.py"]
