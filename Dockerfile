@@ -3,11 +3,11 @@ FROM python:3.10-slim
 # Set working directory
 WORKDIR /app
 
-# Copy backend code
+# Copy files
 COPY . .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Run the scraper (modify as needed)
+# Run script
 CMD ["python", "kijiji_scraper.py"]
