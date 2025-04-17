@@ -7,14 +7,16 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'icon-192.png', 'icon-512.png'],
+      includeAssets: ['vite.svg'], // You can add icons here too
       manifest: {
         name: 'Kijiji Motorcycle Listings',
-        short_name: 'KijijiScraper',
-        start_url: '.',
+        short_name: 'Scrapzy',
+        description: 'Get fresh Kijiji motorcycle listings instantly!',
+        start_url: '/',
+        scope: '/',
         display: 'standalone',
-        background_color: '#000000',
         theme_color: '#000000',
+        background_color: '#000000',
         icons: [
           {
             src: 'icon-192.png',

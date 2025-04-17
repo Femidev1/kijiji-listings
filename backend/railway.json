@@ -1,0 +1,11 @@
+{
+    "build": {
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "deploy": {
+      "command": "python3 kijiji_scraper.py",
+      "cwd": "backend"
+    }
+  }
