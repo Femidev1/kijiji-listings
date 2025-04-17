@@ -4,9 +4,7 @@ import json
 import os
 
 app = Flask(__name__)
-
-# ✅ TEMPORARY SOLUTION: Allow all origins (or tighten with regex pattern)
-CORS(app)
+CORS(app)  # Allow all origins for now
 
 @app.route("/listings", methods=["GET"])
 def get_listings():
@@ -16,4 +14,5 @@ def get_listings():
     return jsonify(data)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 8000))  # ✅ Use Railway-provided port
+    app.run(host="0.0.0.0", port=port)
