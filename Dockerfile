@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Run the Flask API instead of scraper
-CMD ["python", "server.py"]
+CMD ["python", "backend/server.py"]
